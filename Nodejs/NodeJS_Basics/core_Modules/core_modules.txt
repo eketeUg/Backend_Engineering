@@ -1,0 +1,30 @@
+Node.js comes with a set of built-in modules, often referred to as core modules, that provide essential functionalities to work with various aspects of the operating system, file system, network, and more. These core modules are automatically available when you use Node.js, and you don't need to install them separately. Some of the basic core modules of Node.js include:
+
+1. `fs` (File System): Provides methods for interacting with the file system, such as reading and writing files, creating and deleting directories, and more.
+
+2. `http` and `https`: These modules enable you to create a web server and handle HTTP requests and responses. `http` is used for creating regular HTTP servers, while `https` is used for creating secure HTTPS servers.
+
+3. `path`: Offers utilities for working with file and directory paths, like joining and resolving paths, extracting directory names, and file extensions.
+
+4. `os` (Operating System): Provides information about the operating system, such as CPU architecture, memory, and network interfaces.
+
+5. `events`: This module facilitates the implementation of event-driven programming in Node.js by providing the `EventEmitter` class.
+
+6. `util`: Contains various utility functions that are commonly used in Node.js development, such as `util.promisify` for converting callback-based functions to Promise-based functions.
+
+7. `querystring`: Helps in parsing and formatting URL query strings.
+
+8. `crypto`: Provides cryptographic functionalities, like hashing, encryption, and decryption.
+
+9. `stream`: Offers an API for working with streams of data, which is essential for handling large data efficiently.
+
+10. `url`: Helps in parsing and formatting URLs.
+
+These are just a few examples of the core modules available in Node.js. There are many other useful core modules, and you can explore the full list and their respective documentation on the official Node.js website or the Node.js API documentation. You can use these core modules by requiring them using the `require` function in your Node.js applications. For example:
+
+```javascript
+const fs = require('fs');
+const http = require('http');
+const path = require('path');
+// ... and so on
+```
