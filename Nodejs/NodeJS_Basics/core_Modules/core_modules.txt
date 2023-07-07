@@ -26,5 +26,6 @@ These are just a few examples of the core modules available in Node.js. There ar
 const fs = require('fs');
 const http = require('http');
 const path = require('path');
+const crypto = require ('crypto');
 // ... and so on
 ```
