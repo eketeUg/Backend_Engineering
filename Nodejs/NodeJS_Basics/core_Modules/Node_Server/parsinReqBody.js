@@ -19,17 +19,18 @@ const server = http.createServer((req, res) => {
     });
 
     // register another event listener to be fired when the on event listerner is done with parsing the data
-    req.on("end", () => {
+    return req.on("end", () => {
       // using the Buffer method to join all the body message and turn them into a string.
       const parsedBody = Buffer.concat(body).toString();
       console.log(parsedBody);
-    });
-    // create a new file and save users message
-    fs.writeFileSync("meesage.txt", "Dummy text");
-    res.statusCode = 302;
-    res.setHeader("Location", "/");
+      const message = parsedBody.split("=")[1];
+      // create a new file and save users message
+      fs.writeFileSync("message.txt", message);
+      res.statusCode = 302;
+      res.setHeader("Location", "/");
 
-    return res.end();
+      return res.end();
+    });
   }
   res.setHeader("Content-Type", "text/html");
   res.write(`<html><body>
