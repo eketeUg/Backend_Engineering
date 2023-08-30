@@ -1,3 +1,4 @@
+// global module - http
 const http = require("http");
 
 // function reqListerner(req, res) {}
@@ -8,5 +9,6 @@ const http = require("http");
 http
   .createServer((req, res) => {
     console.log(req);
+    res.send("Hello");
   })
   .listen(3000);
