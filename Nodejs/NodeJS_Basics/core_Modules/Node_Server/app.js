@@ -6,9 +6,18 @@ const http = require("http");
 // http.createServer(reqListerner);
 // or
 
+// http
+//   .createServer((req, res) => {
+//     console.log(req);
+//     // process.exit();
+//   })
+//   .listen(3000);
+
+// to access some request fields like url, method and headers
+
 http
   .createServer((req, res) => {
-    console.log(req);
-    res.send("Hello");
+    console.log(req.url, req.method);
+    // process.exit();
   })
   .listen(3000);
