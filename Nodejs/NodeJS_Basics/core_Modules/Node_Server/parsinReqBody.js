@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
   }
   if (url === "/message" && method === "POST") {
     const body = [];
-    // register event listerner-- a data event
+    // register event listerner to listen to a data event
     req.on("data", (chunk) => {
       console.log(chunk);
       body.push(chunk);
