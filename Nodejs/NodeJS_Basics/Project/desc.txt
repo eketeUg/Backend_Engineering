@@ -1,3 +1,20 @@
 Task: Implement a simple task management API
 
 Requirements:
+    1. create an endpoint to retriev a list of tasks. The endpoint should return a response containing an array of task objects, each task containing the following attribute:
+        id(integer)
+        Title(String)
+        Description(String)
+        Status(String): Can be "Pending", "In progress", "Completed"
+        Created At(datetime)
+        Updated At(datetime)
+
+    2. create an endpoint to create a new task. The ednpoint should accept the task Id as a parameter and return a json response containing the corresponding task object if it exists, or an appropriate error message if not found.
+
+    3. Create an endpoint to create new task. the endpoint should accept a json payload containing th task data (title, dscription). validate the input, and save the new task to a data source. the response should contain the newly created task object.
+
+    4. Create an endpoint to update the status of a task. the endpoint should accept the task Id and the new status as parameters and update the task's status accordinly in the data source. the response should contain the updated task object.
+
+    5. Create an endpoint to delete a task. the endpointshould accept the task Id as a parameter and remove the corresponding task from the data source.
+
+    6. Write a simple react PWA interface to perform all these actions
