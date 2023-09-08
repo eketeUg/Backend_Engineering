@@ -1,11 +1,19 @@
 const http = require("http");
 const express = require("express");
 
+const app = express();
+
 // middleware
 app.use((req, res, next) => {
   console.log("first middleware");
+  next(); // allows the request to continue to the next middleware in line
+});
+app.use((req, res, next) => {
+  console.log("second middleware");
 });
 
-const app = express();
+// creating a server instant
 
-app.listen(5000);
+app.listen(5000, () => {
+  console.log(" app is running on port 5000");
+});
