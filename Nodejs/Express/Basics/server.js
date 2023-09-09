@@ -10,6 +10,8 @@ app.use((req, res, next) => {
 });
 app.use((req, res, next) => {
   console.log("second middleware");
+  // sending a response
+  res.send(`<h1>Express</h1>`);
 });
 
 // creating a server instant
