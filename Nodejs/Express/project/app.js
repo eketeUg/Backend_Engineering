@@ -1,6 +1,10 @@
 const express = require("express");
+const bodyParser = require("body-parser"); // to parse request bodies
 // instantiating the express app
 const app = express();
+
+// request body parse middleware
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // route middleware to render add product page
 //note app.use() method works with all http method verbs
@@ -18,7 +22,6 @@ app.post("/product", (req, res, next) => {
   console.log(req.body);
   res.redirect("/"); // to redirect to another route
 });
-
 // route middleware to handle
 app.use("/", (req, res, next) => {
   res.send("<h1>Hello from my shop</h1>");
