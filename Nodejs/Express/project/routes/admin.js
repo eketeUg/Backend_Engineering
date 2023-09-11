@@ -5,7 +5,7 @@ const router = express.Router();
 
 // route middleware to render add product page
 //note app.use() method works with all http method verbs
-router.use("/add-product", (req, res, next) => {
+router.get("/add-product", (req, res, next) => {
   res.send(
     ` <form action="/product" method="POST">
       <input type="text" name="title" />

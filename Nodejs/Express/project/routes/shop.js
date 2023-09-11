@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 
 // route middleware to handle
-router.use("/", (req, res, next) => {
+router.get("/", (req, res, next) => {
   res.send("<h1>Hello from my shop</h1>");
 });
 
