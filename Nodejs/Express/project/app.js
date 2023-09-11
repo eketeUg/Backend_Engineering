@@ -3,29 +3,13 @@ const bodyParser = require("body-parser"); // to parse request bodies
 // instantiating the express app
 const app = express();
 
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
 // request body parse middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// route middleware to render add product page
-//note app.use() method works with all http method verbs
-app.use("/add-product", (req, res, next) => {
-  res.send(
-    ` <form action="/product" method="POST">
-      <input type="text" name="title" />
-      <button type="submit">submit</button>
-    </form>`
-  );
-});
-
-// route middleware to product creation
-app.post("/product", (req, res, next) => {
-  console.log(req.body);
-  res.redirect("/"); // to redirect to another route
-});
-// route middleware to handle
-app.use("/", (req, res, next) => {
-  res.send("<h1>Hello from my shop</h1>");
-});
+app.use(adminRoutes); // instantiating the admin route
+app.use(shopRoutes); // instantiating the shop route
 
 app.listen(3000, () => {
   console.log("app is listening on port 3000");
