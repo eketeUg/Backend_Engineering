@@ -8,7 +8,7 @@ const shopRoutes = require("./routes/shop");
 // request body parse middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(adminRoutes); // instantiating the admin route
+app.use("/admin", adminRoutes); // instantiating the admin route
 app.use(shopRoutes); // instantiating the shop route
 
 // adding 404 error middleware to handle any request to a wrong route
