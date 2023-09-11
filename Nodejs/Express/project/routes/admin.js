@@ -1,6 +1,7 @@
 // routes for admin
 const path = require("path");
 const express = require("express");
+const rootDir = require("../util/path"); // helper function for rootdirectory
 
 const router = express.Router();
 
@@ -14,7 +15,7 @@ router.get("/add-product", (req, res, next) => {
   //     </form>`
   //   );
 
-  res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));
+  res.sendFile(path.join(rootDir, "views", "add-product.html"));
 });
 
 // route middleware to product creation

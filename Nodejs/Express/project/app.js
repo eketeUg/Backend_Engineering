@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+const rootDir = require("./util/path"); // helper function for rootdirectory
 const bodyParser = require("body-parser"); // to parse request bodies
 // instantiating the express app
 const app = express();
@@ -15,7 +16,7 @@ app.use(shopRoutes); // instantiating the shop route
 // adding 404 error middleware to handle any request to a wrong route
 app.use((req, res, next) => {
   //   res.status(404).send(`<h1>Page note found</h1>`);
-  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
+  res.status(404).sendFile(path.join(rootDir, "views", "404.html"));
 });
 
 app.listen(3000, () => {
