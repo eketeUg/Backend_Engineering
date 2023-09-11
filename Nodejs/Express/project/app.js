@@ -9,6 +9,8 @@ const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 // request body parse middleware
 app.use(bodyParser.urlencoded({ extended: false }));
+// static file middleware
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/admin", adminRoutes); // instantiating the admin route
 app.use(shopRoutes); // instantiating the shop route
