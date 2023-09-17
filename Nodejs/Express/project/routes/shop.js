@@ -12,7 +12,8 @@ const router = express.Router();
 router.get("/", (req, res, next) => {
   console.log("shop.js", admin.products);
   //res.send("<h1>Hello from my shop</h1>");
-  res.sendFile(path.join(rootDir, "views", "shop.html")); // serving html page
+  //res.sendFile(path.join(rootDir, "views", "shop.html")); // serving html page
+  res.render("shop");
 });
 
 module.exports = router;

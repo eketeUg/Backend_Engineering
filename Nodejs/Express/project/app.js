@@ -5,6 +5,10 @@ const bodyParser = require("body-parser"); // to parse request bodies
 // instantiating the express app
 const app = express();
 
+// setting up template engine
+app.set("view engine", "pug");
+app.set("views", "views");
+
 const admin = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 // request body parse middleware
