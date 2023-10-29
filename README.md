@@ -1,1 +1,1 @@
-# Backend Engineering projects and concepts 
+# Backend Engineering projects, concepts and best practices
