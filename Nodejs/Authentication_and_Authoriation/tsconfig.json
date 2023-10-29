@@ -113,8 +113,8 @@
     ".env",
     "src/**/*"
   ],
-  "exclude": ["node_modules", "src/http", "src/logs"],
-  "ts-node": {
-    "require": ["tsconfig-paths/register"]
-  }
+  "exclude": ["node_modules", "src/http", "src/logs"]
+  // "ts-node": {
+  //   "require": ["tsconfig-paths/register"]
+  // }
 }
