@@ -15,3 +15,6 @@ const server = net.createServer((socket) => {
 });
 
 server.listen(3000, "127.0.0.1");
+
+// open a terminal and run nc 127.0.0.1 3000 to establish a TCP connection
+// note you can execute multiple tcp connection with the same server
