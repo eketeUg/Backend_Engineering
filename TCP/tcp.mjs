@@ -12,7 +12,7 @@ const server = net.createServer((socket) => {
     console.log("Received data " + data.toString());
   });
 });
-
+console.log(server.address);
 server.listen(3000, "127.0.0.1");
 
 // open a terminal and run nc 127.0.0.1 3000 to establish a TCP connection
