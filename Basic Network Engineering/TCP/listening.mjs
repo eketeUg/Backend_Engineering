@@ -9,6 +9,11 @@ httpserver.on("listening", () => {
     }/ on ${httpserver.address().address} family ${httpserver.address().family}`
   );
 });
+
+httpserver.on("error", () => {
+  console.error(error);
+});
+
 // :: ipv6 => 0.0.0.0 ipv4
 //unspecified address
 httpserver.listen(0, "127.0.0.1");
@@ -23,6 +28,10 @@ httpserver6.on("listening", () => {
       httpserver6.address().family
     }`
   );
+});
+
+httpserver6.on("error", () => {
+  console.error(error);
 });
 // :: ipv6 => 0.0.0.0 ipv4
 //unspecified address
